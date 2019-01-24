@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="javascript">
+  <meta name="description" content="一、概述12Javascript是一种面向对象的程序设计语言，但是它本身是没有“类”的概念，它是靠原型和原型链实现对象属性的继承。在理解原型前，需要先知道对象的构造函数是什么，构造函数都有什么特点？ 1.构造函数123456789101112131415161718// 构造函数 Person()function Person(name, gender) &amp;#123;    this.name =">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="羡慕">
-<meta property="og:url" content="http://jshao.org.cn/2019/01/25/postName/index.html">
+<meta property="og:title" content="Javascript原型与原型链">
+<meta property="og:url" content="http://jshao.org.cn/2019/01/25/javascript01/index.html">
 <meta property="og:site_name" content="技术浩">
-<meta property="og:description" content="javascript">
+<meta property="og:description" content="一、概述12Javascript是一种面向对象的程序设计语言，但是它本身是没有“类”的概念，它是靠原型和原型链实现对象属性的继承。在理解原型前，需要先知道对象的构造函数是什么，构造函数都有什么特点？ 1.构造函数123456789101112131415161718// 构造函数 Person()function Person(name, gender) &amp;#123;    this.name =">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-24T16:37:20.792Z">
+<meta property="og:updated_time" content="2019-01-24T17:02:53.136Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="羡慕">
-<meta name="twitter:description" content="javascript">
+<meta name="twitter:title" content="Javascript原型与原型链">
+<meta name="twitter:description" content="一、概述12Javascript是一种面向对象的程序设计语言，但是它本身是没有“类”的概念，它是靠原型和原型链实现对象属性的继承。在理解原型前，需要先知道对象的构造函数是什么，构造函数都有什么特点？ 1.构造函数123456789101112131415161718// 构造函数 Person()function Person(name, gender) &amp;#123;    this.name =">
 
 
 
 
 
 
-  <link rel="canonical" href="http://jshao.org.cn/2019/01/25/postName/">
+  <link rel="canonical" href="http://jshao.org.cn/2019/01/25/javascript01/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>羡慕 | 技术浩</title>
+  <title>Javascript原型与原型链 | 技术浩</title>
   
 
 
@@ -224,7 +224,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
         
@@ -241,7 +241,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
 
@@ -293,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jshao.org.cn/2019/01/25/postName/">
+    <link itemprop="mainEntityOfPage" href="http://jshao.org.cn/2019/01/25/javascript01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="张浩">
@@ -310,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">羡慕
+          <h1 class="post-title" itemprop="name headline">Javascript原型与原型链
 
               
             
@@ -329,14 +329,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2019-01-25 00:36:59 / Updated at: 00:37:20" itemprop="dateCreated datePublished" datetime="2019-01-25T00:36:59+08:00">2019-01-25</time>
+              <time title="Created: 2019-01-25 00:36:59 / Modified: 01:02:53" itemprop="dateCreated datePublished" datetime="2019-01-25T00:36:59+08:00">2019-01-25</time>
             
 
             
@@ -375,7 +375,9 @@
       
 
       
-        
+        <h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Javascript是一种面向对象的程序设计语言，但是它本身是没有“类”的概念，它是靠原型和原型链实现对象属性的继承。</span><br><span class="line">在理解原型前，需要先知道对象的构造函数是什么，构造函数都有什么特点？</span><br></pre></td></tr></table></figure>
+<h2 id="1-构造函数"><a href="#1-构造函数" class="headerlink" title="1.构造函数"></a>1.构造函数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 构造函数 Person()</span><br><span class="line"><span class="keyword">function</span> Person(name, gender) &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.gender = gender;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var person = new Person(<span class="string">"jshao"</span>, <span class="string">"男"</span>);</span><br><span class="line"></span><br><span class="line">//最后创建出来的对象实例 person</span><br><span class="line">person</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    name: <span class="string">"jshao"</span>,</span><br><span class="line">    gender: <span class="string">"男"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">以上代码，普通函数 Person()，加上 new 关键字后，就构成了一个对象person</span><br><span class="line">所有构造函数的定义就是普通函数加上new关键字，并总会返回一个对象。</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -401,22 +403,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/01/24/post-title/" rel="next" title="post title">
-                <i class="fa fa-chevron-left"></i> post title
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -458,8 +444,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -474,8 +469,8 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -504,6 +499,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、概述"><span class="nav-number">1.</span> <span class="nav-text">一、概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-构造函数"><span class="nav-number">1.1.</span> <span class="nav-text">1.构造函数</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -529,7 +541,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
