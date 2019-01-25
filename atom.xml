@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>技术浩</title>
+  
+  <subtitle>专注于WEB前端开发</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://jshao.org.cn/"/>
+  <updated>2019-01-25T01:51:00.398Z</updated>
+  <id>http://jshao.org.cn/</id>
+  
+  <author>
+    <name>张浩</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Javascript原型与原型链</title>
+    <link href="http://jshao.org.cn/2019/01/25/javascript01/"/>
+    <id>http://jshao.org.cn/2019/01/25/javascript01/</id>
+    <published>2019-01-24T16:36:59.000Z</published>
+    <updated>2019-01-25T01:51:00.398Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p><a href="http://zhuzhuyule.xyz" target="_blank" rel="noopener">Javascript</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">是一种面向对象的程序设计语言，但是它本身是没有“类”的概念，它是靠原型和原型链实现对象属性的继承。</span><br><span class="line">在理解原型前，需要先知道对象的构造函数是什么，构造函数都有什么特点？</span><br></pre></td></tr></table></figure></p><h2 id="1-构造函数"><a href="#1-构造函数" class="headerlink" title="1.构造函数"></a>1.构造函数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 构造函数 Person()</span><br><span class="line"><span class="keyword">function</span> Person(name, gender) &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.gender = gender;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var person = new Person(<span class="string">"jshao"</span>, <span class="string">"男"</span>);</span><br><span class="line"></span><br><span class="line">//最后创建出来的对象实例 person</span><br><span class="line">person</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    name: <span class="string">"jshao"</span>,</span><br><span class="line">    gender: <span class="string">"男"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">以上代码，普通函数 Person()，加上 new 关键字后，就构成了一个对象person</span><br><span class="line">所有构造函数的定义就是普通函数加上new关键字，并总会返回一个对象。</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://zhuzhuyule.xyz&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://jshao.org.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="node.js" scheme="http://jshao.org.cn/tags/node-js/"/>
+    
+      <category term="express" scheme="http://jshao.org.cn/tags/express/"/>
+    
+  </entry>
+  
+</feed>
